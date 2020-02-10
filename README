@@ -1,0 +1,45 @@
+****************************************************************************************************
+************************************    ‫‪Shapes Intersection     ************************************
+****************************************************************************************************
+OOP, Inheritance, Polymorphism, Design, STL.
+
+
+Files:
+~~~~~~
+Makefile           -   Compiles project.
+README             -   This file.
+Shapes.cpp         -   This file receives the input from the user, process it, and gives the correct
+                       output.
+Shape.cpp          -   Represents a basic shape.
+Shape.h            -   Header File.
+Triangle.cpp       -   Represents a triangle, inherits from Shape.
+Triangle.h         -   Header File.
+Trapez.cpp         -   Represents a trapez, inherits from Shape.
+Trapez.h           -   Header File.
+Point.cpp          -   Euclidean space point object.
+Point.h            -   Header File.
+ShapesFactory.cpp  -   By a pre-defined const string determines which shape object should be
+                       returned.
+ShapesFactory.h    -   Header File.
+Defs.h             -   Ex2 Supplied Files.
+PrintOuts.h        -   Ex2 Supplied Files.
+PrintOuts.cpp      -   Ex2 Supplied Files.
+
+
+Implementation Details:
+~~~~~~~~~~~~~~~~~~~~~~~
+My basic shape is represented by the Shape class.
+It has a default name, which is replaced according to the inheriting shape.
+For each shape the names are numbered from 0 to the last object created.
+The methods for checking if the shape is legal, the area of the shape and printing of the shape are
+all virtual, that is, because the implementation is different from shape to shape.
+Calculating the determinant has several usages, also outside the Shape class, hence it is defined
+as a static function.
+Adding a new point, checking if shapes do intersect and getting the shape's error message is the
+same for all shapes.
+In the Point class, it is worth mentioning the equality and subtraction functions that works with
+precision of the Default given Epsilon value.
+The shapes factory holds as constants the letters representing each shape (as defined),
+and knows to return the correct pointer for the new shape object.
+I chose to implement a factory for greater ease in adding future shapes types to the input file.
+****************************************************************************************************
